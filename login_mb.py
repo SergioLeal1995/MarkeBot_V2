@@ -34,7 +34,7 @@ def login(info,where):
     Buscar = browser.find_element_by_id('lst-ib')
     Buscar.send_keys(Keys.BACKSPACE)
     # Concatenating all the message in the browser
-    Buscar.send_keys(info + ' en ' + where + ' colombia')
+    Buscar.send_keys(info)
     time.sleep(1)
     # Click on the sarch botton
     browser.find_element_by_id('mKlEF').click()

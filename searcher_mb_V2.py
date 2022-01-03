@@ -10,12 +10,15 @@ from time import sleep
 
 import random
 
-def searcher(browser,city):
+def searcher(browser,city,info):
     print('Searcher IN')
     elements = []
     less = 2
     more = 5
-
+    AG = 0 # Gustavo check
+    ME = 0 # Message sended
+    date = ' ' # Date of first contact with client
+    client = ' ' # Ansewr of the client
 
     browser.implicitly_wait(5)
     long = len(browser.find_elements_by_class_name('VkpGBb'))
@@ -58,7 +61,8 @@ def searcher(browser,city):
             print('Place whiout phone number')
             adress = ((info[0].find_all('span'))[-1]).get_text()
 
-        lista = [market,adress,tel,city]
+        lista = [market,adress,tel,city,AG,ME,date,client,info]
+        # info = key words used to the search
     
     
         elements.append(lista)
