@@ -11,7 +11,7 @@ import gspread
 import pandas as pd
 
 def spreadSheet(lista,name_sheet,flag):
-
+    copy = ''
     print('******************* Cloud IN **************************')
     
     # define the scope
@@ -43,6 +43,7 @@ def spreadSheet(lista,name_sheet,flag):
         records_df = pd.DataFrame.from_dict(lista)
         
         sheet_runs.insert_rows(records_df.values.tolist())
+        copy = sheet_runs
         print('Sending information')
-        
+    return copy    
     print('********************* Cloud OUT ****************************')  

@@ -4,12 +4,13 @@ Created on Sun Dec 26 15:55:10 2021
 
 @author: Sergio Leal
 """
-from selenium.common.exceptions import ElementClickInterceptedException
+
 from selenium.common.exceptions import NoSuchElementException
 from time import sleep
 import login_mb
 import searcher_mb_V2
 import cloud_mb
+import formatSheet
 
 
 # Sheet name 
@@ -42,7 +43,7 @@ browser, city = login_mb.login(info,where)
 cloud_mb.spreadSheet('',name_sheet,True)
 
 # In this cicle we determine the times that the search do
-for i in range(25):
+for i in range(2):
     
     # Function in charge to do login and put the search in the browser
     arr = searcher_mb_V2.searcher(browser,city,info)
@@ -63,23 +64,9 @@ for i in range(25):
     except NoSuchElementException:
         print('La ejecución ha finalizado sin novedades')
         break
-
-# Retornar sheet_runs se reemplaza en worksheet
-
-# worksheet.format("A2:B2", {
-#     "backgroundColor": {
-#       "red": 0.0,
-#       "green": 120,
-#       "blue": 50
-#     },
-#     "horizontalAlignment": "CENTER",
-#     "textFormat": {
-#       "foregroundColor": {
-#         "red": 1.0,
-#         "green": 1.0,
-#         "blue": 1.0
-#       },
-#       "fontSize": 10,
-#       "bold": True
-#     }
-# })
+#[market,adress,tel,GustavoCheck,MessageSended,dateOfFirstContact,AnswerOfTheClient,city,info]
+arr_list = [['Empresa','Dirección','Teléfono','Aprobado Gustavo?',
+            'Mensaje enviado?','Fecha primer contacto','Cliente ha respondido?',
+            'ciudad','Búsqueda']]
+sheet = cloud_mb.spreadSheet(arr_list, name_sheet, False)
+formatSheet.formating(sheet)

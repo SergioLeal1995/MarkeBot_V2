@@ -37,19 +37,23 @@ def searcher(browser,city,busca):
             try1 = soup.find('div',{'class':'SPZz6b'})
             try2 = try1.find('h2')
             market = try2.find('span').get_text()
-
-            info = soup.find_all('div',{'class':'zloOqf PZPZlf'})
-            adress = ((info[0].find_all('span'))[-1]).get_text()
-            tel = ((info[-1].find_all('span'))[-1]).get_text()
-            if adress == tel:
-                tel = ' '
-    
+            
+            try:
+                info = soup.find_all('div',{'class':'zloOqf PZPZlf'})
+                adress = ((info[0].find_all('span'))[-1]).get_text()
+                tel = ((info[-1].find_all('span'))[-1]).get_text()
+                if adress == tel:
+                    tel = ' '
+            except IndexError:
+                adress = ''
+                tel = ''
+                
         except TypeError:
     
             print('Place whiout phone number')
             adress = ((info[0].find_all('span'))[-1]).get_text()
 
-        lista = [market,adress,tel,city,0,0,' ',' ',busca]
+        lista = [market,adress,tel,0,0,' ',' ',city,busca]
         print(lista)
         # info = key words used to the search
         #[market,adress,tel,city,GustavoCheck,MessageSended,dateOfFirstContact,AnswerOfTheClient,info]
