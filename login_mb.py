@@ -2,8 +2,16 @@
 """
 Created on Sun Dec 26 11:31:53 2021
 
-Este código se encarga de acceder al navegador dirigirse hasta 
-google maps y luego escribir lo que deseamos buscar.
+This code is in charge to access to the browser and go to goole maps and then
+write what we want to search
+
+inputs:
+    info: Information that we want to search
+    where: City of the search
+    
+outputs:
+    browser: Browser object to interact
+    cp_wh: Upper case of the city
 
 @author: seran
 """
@@ -19,7 +27,7 @@ def login(info,where):
     # Creating the object to open de browser
     browser = webdriver.Chrome(ChromeDriverManager().install())
     # Getting the URL and open de browser
-    #browser.get('https://www.google.com/maps/@15,-2.970703,3z?hl=es')
+    
     browser.get("""https://www.google.com/search?sxsrf=AOaemvJFlZpUo_x9-cto6m55dikbhPjYEg:
                 1640914337240&q=0&rflfq=1&rldoc=1&rllag=4756802,-74199411,6658&tbm=lcl&sa=
                 X&ved=2ahUKEwif-rWh8oz1AhWeSTABHZqmCCYQtgN6BAgCEFM&biw=1920&bih=1011&dpr=

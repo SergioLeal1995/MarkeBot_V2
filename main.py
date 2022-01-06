@@ -2,6 +2,10 @@
 """
 Created on Sun Dec 26 15:55:10 2021
 
+This is the main function of MarkeBot, here we can find the guide to do the
+search and all the structure of the code with each of the functions that are
+required to the bot functionality
+
 @author: Sergio Leal
 """
 

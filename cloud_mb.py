@@ -2,7 +2,19 @@
 """
 Created on Sat Dec 18 18:47:32 2021
 
-@author: seran
+This function is in charge of create the new sheet in the document and send
+the information to the cloud (google spreadsheet)
+
+inputs: 
+    lista: Is the list of information that the function searcher give us and this
+           list is sended to the cloud
+    name_sheet: Is the name of the new google sheet
+    flag: is the validator if we want to create a new sheet or send the information
+    
+outputs:
+    copy: Is the sheet objet, is necesary to giving format to the new sheet
+
+@author: Sergio Leal
 """
 
 from oauth2client.service_account import ServiceAccountCredentials

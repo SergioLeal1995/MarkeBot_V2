@@ -2,6 +2,9 @@
 """
 Created on Tue Jan  4 19:36:29 2022
 
+This file is in charge to giving format at the first row of the file
+and centerig the rest of the information.
+
 @author: Sergio Leal
 """
 
@@ -22,5 +25,14 @@ def formating(sheet):
           },
           "fontSize": 10,
           "bold": True
+        }
+    })
+    
+    sheet.format("A2:I1006", {
+        
+        "horizontalAlignment": "CENTER",
+        "textFormat": {
+          "fontSize": 10,
+          "bold": False
         }
     })
