@@ -12,7 +12,7 @@ required to the bot functionality
 from selenium.common.exceptions import NoSuchElementException
 from time import sleep
 import login_mb
-import searcher_mb_V2
+import searcher_mb
 import cloud_mb
 import formatSheet
 
@@ -50,7 +50,7 @@ cloud_mb.spreadSheet('',name_sheet,True)
 for i in range(2):
     
     # Function in charge to do login and put the search in the browser
-    arr = searcher_mb_V2.searcher(browser,city,info)
+    arr = searcher_mb.searcher(browser,city,info)
     
     # Verifying nonrepeat registers
     result = []
