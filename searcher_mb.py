@@ -40,8 +40,11 @@ def searcher(browser,city,busca):
             browser.implicitly_wait(5)
             boxe = browser.find_elements_by_class_name('VkpGBb')
             # Here we use click in each element
-            boxe[j].click()
-            
+            try:
+                boxe[j].click()
+            except IndexError:
+                print(boxe[j])
+                continue
             # we extrat all html code of the page to extract the information
             sleep(random.uniform(less,more))
             src = browser.page_source

@@ -1,0 +1,9 @@
+selenium
+pandas
+numpy
+gspread
+oauth2client
+webdriver_manager
+bs4
+lxml
+cssselect

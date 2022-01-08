@@ -47,7 +47,7 @@ browser, city = login_mb.login(info,where)
 cloud_mb.spreadSheet('',name_sheet,True)
 
 # In this cicle we determine the times that the search do
-for i in range(2):
+for i in range(25):
     
     # Function in charge to do login and put the search in the browser
     arr = searcher_mb.searcher(browser,city,info)
