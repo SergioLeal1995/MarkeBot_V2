@@ -43,7 +43,6 @@ def searcher(browser,city,busca):
             try:
                 boxe[j].click()
             except IndexError:
-                print(boxe[j])
                 continue
             # we extrat all html code of the page to extract the information
             sleep(random.uniform(less,more))
