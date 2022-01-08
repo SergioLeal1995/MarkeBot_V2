@@ -39,11 +39,11 @@ def spreadSheet(lista,name_sheet,flag):
     client = gspread.authorize(creds)
     
     # get the instance of the Spreadsheet
-    sheet = client.open('Empresas')
+    sheet = client.open('MarkeBot')
     
     if flag==True:
         # Creating new sheet
-        sheet.add_worksheet(rows=1000,cols=9,title=name_sheet)
+        sheet.add_worksheet(rows=1000,cols=10,title=name_sheet)
     else:
         # get the quantity of sheets
         quantity = len(sheet.worksheets())

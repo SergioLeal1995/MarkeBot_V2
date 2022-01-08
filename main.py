@@ -70,7 +70,7 @@ for i in range(25):
         break
 #[market,adress,tel,GustavoCheck,MessageSended,dateOfFirstContact,AnswerOfTheClient,city,info]
 arr_list = [['Empresa','Dirección','Teléfono','Aprobado Gustavo?',
-            'Mensaje enviado?','Fecha primer contacto','Cliente ha respondido?',
+            'Mensaje enviado?','Fecha primer contacto','Cliente ha respondido?','Número inválido para wpp?',
             'ciudad','Búsqueda']]
 sheet = cloud_mb.spreadSheet(arr_list, name_sheet, False)
 formatSheet.formating(sheet)

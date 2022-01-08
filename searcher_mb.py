@@ -71,7 +71,7 @@ def searcher(browser,city,busca):
             print('Place whiout phone number')
             adress = ((info[0].find_all('span'))[-1]).get_text()
 
-        lista = [market,adress,tel,0,0,' ',' ',city,busca]
+        lista = [market,adress,tel,0,0,' ',' ','',city,busca]
         print(lista)
         # info = key words used to the search
         #[market,adress,tel,city,GustavoCheck,MessageSended,dateOfFirstContact,AnswerOfTheClient,info]
