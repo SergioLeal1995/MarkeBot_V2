@@ -18,7 +18,7 @@ outputs:
 
 from bs4 import BeautifulSoup
 from time import sleep
-
+from selenium.common.exceptions import ElementClickInterceptedException
 import random
 
 def searcher(browser,city,busca):
@@ -41,8 +41,11 @@ def searcher(browser,city,busca):
             boxe = browser.find_elements_by_class_name('VkpGBb')
             # Here we use click in each element
             try:
-                boxe[j].click()
-            except IndexError:
+                try:
+                    boxe[j].click()
+                except IndexError:
+                    continue
+            except ElementClickInterceptedException:
                 continue
             # we extrat all html code of the page to extract the information
             sleep(random.uniform(less,more))

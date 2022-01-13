@@ -74,3 +74,4 @@ arr_list = [['Empresa','Dirección','Teléfono','Aprobado Gustavo?',
             'ciudad','Búsqueda']]
 sheet = cloud_mb.spreadSheet(arr_list, name_sheet, False)
 formatSheet.formating(sheet)
+browser.quit()

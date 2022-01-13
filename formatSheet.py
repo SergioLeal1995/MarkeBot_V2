@@ -9,7 +9,7 @@ and centerig the rest of the information.
 """
 
 def formating(sheet):
-    sheet.format("A1:I1", {
+    sheet.format("A1:J1", {
         
         "backgroundColor": {
           "red": 0.0,
@@ -28,7 +28,7 @@ def formating(sheet):
         }
     })
     
-    sheet.format("A2:I1006", {
+    sheet.format("A2:J1006", {
         
         "horizontalAlignment": "CENTER",
         "textFormat": {
